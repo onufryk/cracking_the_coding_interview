@@ -1,44 +1,15 @@
-class Node {
-  Integer value = null;
-  Node next = null;
+package com.onufryk.crack;
 
-  public Node(Integer value) {
-    this.value = value;
-    this.next = null;
-  }
-  public Node(Integer value, Node next) {
-    this.value = value;
-    this.next = next;
-  }
-}
+import com.onufryk.crack.common.LinkedList;
+import com.onufryk.crack.common.Node;
 
-class LinkedList {
-  Node root = null;
 
-  public LinkedList() {
-  }
 
-  public LinkedList(Node root) {
-    this.root = root;
-  }
-
-  public String toString() {
-    StringBuffer output = new StringBuffer();
-    Node current = this.root;
-    while (current != null) {
-      output.append(current.value);
-      current = current.next;
-    }
-
-    return output.toString();
-  }
-}
-
-class SpecificList extends LinkedList {
-  public SpecificList() {
+class NthSearchableList extends LinkedList {
+  public NthSearchableList() {
     super();
   }
-  public  SpecificList(Node root) {
+  public  NthSearchableList(Node root) {
     super(root);
   }
 
@@ -64,9 +35,11 @@ class SpecificList extends LinkedList {
   }
 }
 
+
+
 public class Question_02_02 {
-  public static void main(String[] args) {
-    SpecificList list = new SpecificList(new Node (5, new Node (6, new Node(2, new Node(6, new Node(3, new Node(8, new Node(2, new Node(5, new Node(5))))))))));
+	public static void main(String[] args) {
+    NthSearchableList list = new NthSearchableList(new Node (5, new Node (6, new Node(2, new Node(6, new Node(3, new Node(8, new Node(2, new Node(5, new Node(5))))))))));
     System.out.println(list);
     System.out.println(list.nthFromTail(5));
   }
