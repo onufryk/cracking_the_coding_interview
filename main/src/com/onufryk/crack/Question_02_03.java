@@ -1,9 +1,9 @@
 package com.onufryk.crack;
 
-import com.onufryk.crack.common.LinkedList;
+import com.onufryk.crack.common.IntLinkedList;
 import com.onufryk.crack.common.IntNode;
 
-class RemovableList extends LinkedList {
+class RemovableList extends IntLinkedList {
 
 	public RemovableList() {
 		super();

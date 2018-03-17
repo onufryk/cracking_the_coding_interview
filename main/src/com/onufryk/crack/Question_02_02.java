@@ -1,11 +1,11 @@
 package com.onufryk.crack;
 
-import com.onufryk.crack.common.LinkedList;
+import com.onufryk.crack.common.IntLinkedList;
 import com.onufryk.crack.common.IntNode;
 
 
 
-class NthSearchableList extends LinkedList {
+class NthSearchableList extends IntLinkedList {
   public NthSearchableList() {
     super();
   }
