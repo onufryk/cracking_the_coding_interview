@@ -1,37 +1,37 @@
 package com.onufryk.crack.common;
 
 public class LinkedList {
-	protected Node root = null;
+	protected IntNode root = null;
 
 	public LinkedList() {
 	}
 
-	public LinkedList(Node root) {
+	public LinkedList(IntNode root) {
 		this.root = root;
 	}
 	
 	public void add(Integer value) {
 		if (this.root == null) {
-			this.root = new Node(value);
+			this.root = new IntNode(value);
 			return;
 		}
-		Node current = this.root;
+		IntNode current = this.root;
 		while (current.next != null) {
 			current = current.next;
 		}
-		current.next = new Node(value);
+		current.next = new IntNode(value);
 	}
 
 	public LinkedList a(Integer value) {
 		if (this.root == null) {
-			this.root = new Node(value);
+			this.root = new IntNode(value);
 			return this;
 		}
-		Node current = this.root;
+		IntNode current = this.root;
 		while (current.next != null) {
 			current = current.next;
 		}
-		current.next = new Node(value);
+		current.next = new IntNode(value);
 		return this;
 	}
 	
@@ -42,7 +42,7 @@ public class LinkedList {
 		if (this.root == null) {
 			return null;
 		}
-		Node current = this.root;
+		IntNode current = this.root;
 		while (current != null) {
 			output.append(current.value);
 			if (current.next != null) {
@@ -57,10 +57,10 @@ public class LinkedList {
 		if (this.root == null) {
 			return;
 		}
-		Node outer = this.root;
+		IntNode outer = this.root;
 		while (outer != null) {
-			Node previous = outer;
-			Node inner = previous.next;
+			IntNode previous = outer;
+			IntNode inner = previous.next;
 			while (inner != null) {
 
 				if (inner.value == outer.value) {

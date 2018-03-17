@@ -1,7 +1,7 @@
 package com.onufryk.crack;
 
 import com.onufryk.crack.common.LinkedList;
-import com.onufryk.crack.common.Node;
+import com.onufryk.crack.common.IntNode;
 
 class RemovableList extends LinkedList {
 
@@ -10,21 +10,21 @@ class RemovableList extends LinkedList {
 
 	}
 
-	public RemovableList(Node root) {
+	public RemovableList(IntNode root) {
 		super(root);
 	}
 
-	public void unlinkNode(Node node) {
-		if (node == null) {
+	public void unlinkNode(IntNode intNode) {
+		if (intNode == null) {
 			return;
 		}
-		if (node.next == null) {
+		if (intNode.next == null) {
 			return;
 		}
-		Node nextNode = node.next;
+		IntNode nextNode = intNode.next;
 		if (nextNode != null) {
-			node.value = nextNode.value;
-			node.next = nextNode.next;
+			intNode.value = nextNode.value;
+			intNode.next = nextNode.next;
 		}
 	}
 
@@ -33,9 +33,9 @@ class RemovableList extends LinkedList {
 public class Question_02_03 {
 
 	public static void main(String[] args) {
-		Node anotherNodeToDelete = new Node(9);
-		Node nodeToDelete = new Node(4, new Node(5, new Node(6, new Node(7, new Node(8, anotherNodeToDelete)))));
-		RemovableList list = new RemovableList(new Node(1, new Node(2, new Node(3, nodeToDelete))));
+		IntNode anotherNodeToDelete = new IntNode(9);
+		IntNode nodeToDelete = new IntNode(4, new IntNode(5, new IntNode(6, new IntNode(7, new IntNode(8, anotherNodeToDelete)))));
+		RemovableList list = new RemovableList(new IntNode(1, new IntNode(2, new IntNode(3, nodeToDelete))));
 		System.out.println(list);
 		list.unlinkNode(anotherNodeToDelete);
 		System.out.println(list);

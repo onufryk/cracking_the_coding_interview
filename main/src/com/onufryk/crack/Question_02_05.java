@@ -1,7 +1,7 @@
 package com.onufryk.crack;
 
 import com.onufryk.crack.common.LinkedList;
-import com.onufryk.crack.common.Node;
+import com.onufryk.crack.common.IntNode;
 
 class CorruptedList extends LinkedList {
 
@@ -9,16 +9,16 @@ class CorruptedList extends LinkedList {
 		super();
 	}
 
-	public CorruptedList(Node root) {
+	public CorruptedList(IntNode root) {
 		super(root);
 	}
 	
-	public Node getCircularLoopStart() {
+	public IntNode getCircularLoopStart() {
 		if (this.root == null) {
 			return null;
 		}
-		Node doubleSpeed = this.root;
-		Node normalSpeed = this.root;
+		IntNode doubleSpeed = this.root;
+		IntNode normalSpeed = this.root;
 		
 		while (doubleSpeed.next != null) {
 			doubleSpeed = doubleSpeed.next.next;
@@ -49,12 +49,12 @@ public class Question_02_05 {
 	// 1 2 3 4 5 3
 
 	public static void main(String[] args) {
-		Node lastNode = new Node(5);
-		Node loopNode = new Node(3, new Node(4, lastNode));
+		IntNode lastNode = new IntNode(5);
+		IntNode loopNode = new IntNode(3, new IntNode(4, lastNode));
 		lastNode.next = loopNode;
 		
-		CorruptedList list = new CorruptedList(new Node(1, new Node(2, loopNode)));
-		Node circularLoopStart = list.getCircularLoopStart();
+		CorruptedList list = new CorruptedList(new IntNode(1, new IntNode(2, loopNode)));
+		IntNode circularLoopStart = list.getCircularLoopStart();
 		if (circularLoopStart != null) {
 			System.out.println("Circular reference detected at " + circularLoopStart.value);
 		} else {

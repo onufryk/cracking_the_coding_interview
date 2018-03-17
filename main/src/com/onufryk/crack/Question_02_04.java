@@ -1,7 +1,7 @@
 package com.onufryk.crack;
 
 import com.onufryk.crack.common.LinkedList;
-import com.onufryk.crack.common.Node;
+import com.onufryk.crack.common.IntNode;
 
 class DigitList extends LinkedList {
 
@@ -9,7 +9,7 @@ class DigitList extends LinkedList {
 		super();
 	}
 
-	public DigitList(Node root) {
+	public DigitList(IntNode root) {
 		super(root);
 	}
 	
@@ -20,18 +20,18 @@ class DigitList extends LinkedList {
 		return this.toNumber(this.root);
 	}
 	
-	private String toNumber(Node node) {
-		if (node.next == null) {
-			return node.value.toString();
+	private String toNumber(IntNode intNode) {
+		if (intNode.next == null) {
+			return intNode.value.toString();
 		}
-		return toNumber(node.next) + node.value.toString();
+		return toNumber(intNode.next) + intNode.value.toString();
 	}
 	
 	public static DigitList add(DigitList a, DigitList b) {
 		DigitList sum = new DigitList();
 		
-		Node currentA = a.root;
-		Node currentB = b.root;
+		IntNode currentA = a.root;
+		IntNode currentB = b.root;
 		while (currentA != null && currentB != null) {
 			sum.add(currentA.value + currentB.value);
 			currentA = currentA.next;
@@ -41,7 +41,7 @@ class DigitList extends LinkedList {
 			return null;
 		}
 		
-		Node current = sum.root;
+		IntNode current = sum.root;
 		while (current != null) {
 			if (current.value > 9) {
 				if (current.next == null) {
@@ -63,8 +63,8 @@ class DigitList extends LinkedList {
 public class Question_02_04 {
 
 	public static void main(String[] args) {
-		DigitList op1 = new DigitList(new Node(3, new Node(1, new Node(5))));
-		DigitList op2 = new DigitList(new Node(5, new Node(9, new Node(2))));
+		DigitList op1 = new DigitList(new IntNode(3, new IntNode(1, new IntNode(5))));
+		DigitList op2 = new DigitList(new IntNode(5, new IntNode(9, new IntNode(2))));
 		System.out.println(op1);
 		System.out.println(op2);
 		System.out.println("Calculating sum of:");

@@ -1,7 +1,7 @@
 package com.onufryk.crack;
 
 import com.onufryk.crack.common.LinkedList;
-import com.onufryk.crack.common.Node;
+import com.onufryk.crack.common.IntNode;
 
 
 
@@ -9,7 +9,7 @@ class NthSearchableList extends LinkedList {
   public NthSearchableList() {
     super();
   }
-  public  NthSearchableList(Node root) {
+  public  NthSearchableList(IntNode root) {
     super(root);
   }
 
@@ -17,7 +17,7 @@ class NthSearchableList extends LinkedList {
     if (n == null || n.equals(0)) {
       return null;
     }
-    Node current = this.root;
+    IntNode current = this.root;
 
     for (int i = 0; i < n; i++) {
       if (current == null) {
@@ -26,7 +26,7 @@ class NthSearchableList extends LinkedList {
       current = current.next;
     }
 
-    Node follower = this.root;
+    IntNode follower = this.root;
     while (current != null) {
       current = current.next;
       follower = follower.next;
@@ -39,7 +39,7 @@ class NthSearchableList extends LinkedList {
 
 public class Question_02_02 {
 	public static void main(String[] args) {
-    NthSearchableList list = new NthSearchableList(new Node (5, new Node (6, new Node(2, new Node(6, new Node(3, new Node(8, new Node(2, new Node(5, new Node(5))))))))));
+    NthSearchableList list = new NthSearchableList(new IntNode (5, new IntNode (6, new IntNode(2, new IntNode(6, new IntNode(3, new IntNode(8, new IntNode(2, new IntNode(5, new IntNode(5))))))))));
     System.out.println(list);
     System.out.println(list.nthFromTail(5));
   }
