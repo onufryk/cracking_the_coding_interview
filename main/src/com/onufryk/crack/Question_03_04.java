@@ -127,6 +127,7 @@ class TowersOfHanoi {
 		this.towers[to - 1].push(value);
 		System.out.println("Moving " + value + " from tower " + from + " to tower " + to + ".");
 		this.moves++;
+		System.out.println(this);
 	}
 
 	@Override
@@ -153,129 +154,52 @@ public class Question_03_04 {
 			game = new TowersOfHanoi(5);
 			System.out.println(game);
 
-			game.move(1, 2);
-			System.out.println(game);
 			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
-
 			game.move(1, 2);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
+			
 			game.move(3, 2);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
+			game.move(1, 3);
+
+			game.move(2, 1);
+			game.move(2, 3);
 
 			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
-			game.move(2, 1);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
 			game.move(1, 2);
-			System.out.println(game);
-			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
 
-			game.move(3, 1);
-			System.out.println(game);
 			game.move(3, 2);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
 			game.move(3, 1);
-			System.out.println(game);
+
 			game.move(2, 1);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
-			game.move(2, 1);
-			System.out.println(game);
 			game.move(3, 2);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
+
 			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
 			game.move(1, 2);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
+
 			game.move(3, 2);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
 			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
+
 			game.move(2, 1);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
 			game.move(2, 3);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
+
 			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
 			game.move(2, 1);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
+
 			game.move(3, 2);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
 			game.move(3, 1);
-			System.out.println(game);
+
 			game.move(2, 1);
-			System.out.println(game);
 			game.move(2, 3);
-			System.out.println(game);
+
 			game.move(1, 3);
-			System.out.println(game);
 			game.move(1, 2);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
+
 			game.move(3, 2);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
 			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
+
 			game.move(2, 1);
-			System.out.println(game);
-			game.move(3, 1);
-			System.out.println(game);
 			game.move(2, 3);
-			System.out.println(game);
-			game.move(1, 2);
-			System.out.println(game);
+
 			game.move(1, 3);
-			System.out.println(game);
-			game.move(2, 3);
-			System.out.println(game);
 
 			if (game.isEnd()) {
 				System.out.println("Completed in " + game.moves + " moves.");
