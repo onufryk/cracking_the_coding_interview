@@ -96,6 +96,7 @@ class TowersOfHanoi {
 
 	public TowersOfHanoi(Integer numberOfDiscs) throws Exception {
 		this.moves = 0;
+		this.numberOfDiscs = numberOfDiscs;
 		this.towers = new Tower[3];
 		for (int ii = 0; ii < 3; ii++) {
 			this.towers[ii] = new Tower(numberOfDiscs);
@@ -114,6 +115,7 @@ class TowersOfHanoi {
 	}
 
 	public void move(Integer from, Integer to) throws Exception {
+		System.out.println("Trying to move from tower " + from + " to tower " + to + ".");
 		if (from == null || from < 1 || from > 3) {
 			throw new Exception("Invalid move");
 		}
@@ -128,6 +130,19 @@ class TowersOfHanoi {
 		System.out.println("Moving " + value + " from tower " + from + " to tower " + to + ".");
 		this.moves++;
 		System.out.println(this);
+	}
+
+	public void start() throws Exception {
+		this.move(this.numberOfDiscs, 1, 3, 2);
+	}
+
+	public void move(Integer n, Integer from, Integer to, Integer aux) throws Exception {
+		if (n > 0) {
+			System.out.println("Moving " + n + " discs from " + from + " to " + to + " (temp: " + aux + ").");
+			this.move(n - 1, from, aux, to);
+			this.move(from, to);
+			this.move(n - 1, aux, to, from);
+		}
 	}
 
 	@Override
@@ -151,55 +166,10 @@ public class Question_03_04 {
 
 		TowersOfHanoi game = null;
 		try {
-			game = new TowersOfHanoi(5);
+			game = new TowersOfHanoi(24);
 			System.out.println(game);
-
-			game.move(1, 3);
-			game.move(1, 2);
 			
-			game.move(3, 2);
-			game.move(1, 3);
-
-			game.move(2, 1);
-			game.move(2, 3);
-
-			game.move(1, 3);
-			game.move(1, 2);
-
-			game.move(3, 2);
-			game.move(3, 1);
-
-			game.move(2, 1);
-			game.move(3, 2);
-
-			game.move(1, 3);
-			game.move(1, 2);
-
-			game.move(3, 2);
-			game.move(1, 3);
-
-			game.move(2, 1);
-			game.move(2, 3);
-
-			game.move(1, 3);
-			game.move(2, 1);
-
-			game.move(3, 2);
-			game.move(3, 1);
-
-			game.move(2, 1);
-			game.move(2, 3);
-
-			game.move(1, 3);
-			game.move(1, 2);
-
-			game.move(3, 2);
-			game.move(1, 3);
-
-			game.move(2, 1);
-			game.move(2, 3);
-
-			game.move(1, 3);
+			game.start();
 
 			if (game.isEnd()) {
 				System.out.println("Completed in " + game.moves + " moves.");
