@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.one;
 
 /*
  * 1.5 Write a method to replace all spaces in a string with ‘%20’.

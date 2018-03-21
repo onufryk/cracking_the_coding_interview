@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.three;
 
 class TowerNode {
 	public Integer value = null;

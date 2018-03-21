@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.one;
 
 /*
  * Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, 

@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.three;
 
 enum StackIndex {
 	FIRST, SECOND, THIRD

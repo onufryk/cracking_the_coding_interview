@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.three;
 
 class MinLinkNode<T extends Comparable<T>> {
 	public T value = null;

@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.one;
 
 /*
  * Write an algorithm such that if an element in an MxN matrix is 0, 

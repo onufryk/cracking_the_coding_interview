@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.one;
 
 import java.util.HashMap;
 import java.util.Map;

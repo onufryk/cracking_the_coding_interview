@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.one;
 
 /*
  * Design an algorithm and write code to remove the duplicate characters in a string 

@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.one;
 
 /*
  * Write code to reverse a C-Style String. 

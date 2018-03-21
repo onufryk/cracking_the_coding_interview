@@ -1,4 +1,4 @@
-package com.onufryk.crack;
+package com.onufryk.crack.two;
 
 import com.onufryk.crack.common.IntLinkedList;
 import com.onufryk.crack.common.IntNode;
