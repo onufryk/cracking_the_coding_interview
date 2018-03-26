@@ -3,23 +3,24 @@ package com.onufryk.crack.four.four;
 import java.util.ArrayList;
 
 class Node {
+	/*
+	 * Tried to make this class universal for all data structures, and 
+	 * it turned out to be a bad idea because of messing everything.
+	 */
 	public Integer value = null;
-	public Node left = null;
-	public Node right = null;
-	public Node next = null;
-	public Node nextInTheQueue = null;
-	public Boolean visited = null;
+	public Node left = null; // Tree
+	public Node right = null; // Tree
+	public Node next = null; // Linked List
+	public Node nextInTheQueue = null; // Queue
 	public Integer level = null;
 	
 	public Node(Integer value) {
 		this.value = value;
-		this.visited = false;
 	}
 	public Node(Integer value, Node left, Node right) {
 		this.value = value;
 		this.left = left;
 		this.right = right;
-		this.visited = false;
 	}
 	
 	@Override
@@ -146,9 +147,6 @@ class Tree {
 		if (this.root == null) {
 			return;
 		}
-		if (this.root.visited) {
-			return;
-		}
 		this.root.level = 0;
 		this.queue = new Queue();
 		this.queue.enqueue(this.root);
@@ -173,16 +171,15 @@ class Tree {
 			}
 			this.leveledLists.get(current.level).add(current);
 		}
-		current.visited = true;
 
 		System.out.print(current.value);
 		System.out.print(" ");
 		
-		if (current.left != null && current.left.visited == false) {
+		if (current.left != null) {
 			current.left.level = current.level + 1;
 			this.queue.enqueue(current.left);
 		}
-		if (current.right != null && current.right.visited == false) {
+		if (current.right != null) {
 			current.right.level = current.level + 1;
 			this.queue.enqueue(current.right);
 		}
