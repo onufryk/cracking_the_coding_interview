@@ -2,6 +2,7 @@ package com.onufryk.crack.four.three;
 
 import java.util.ArrayList;
 
+
 class Node {
 	public Integer value;
 	public Node left;
@@ -45,19 +46,18 @@ class Tree {
 		return newNode;
 	}
 	
-	public void traverseInOrder() {
-		System.out.println("Tree in-order:");
-		this.traverseInOrder(this.root);
+	public void traversePreOrder() {
+		this.traversePreOrder(this.root);
 	}
 
-	private void traverseInOrder(Node node) {
+	private void traversePreOrder(Node node) {
 		if (node == null) {
 			return;
 		}
-		this.traverseInOrder(node.left);
 		System.out.print(node);
 		System.out.print(" ");
-		this.traverseInOrder(node.right);
+		this.traversePreOrder(node.left);
+		this.traversePreOrder(node.right);
 	}
 	
 }
@@ -80,7 +80,7 @@ public class Question_04_03 {
 		
 		Tree tree = new Tree();
 		tree.addNumbers(numbers);
-		tree.traverseInOrder();
+		tree.traversePreOrder();
 
 	}
 
