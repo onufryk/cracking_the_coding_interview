@@ -1,6 +1,5 @@
 package com.onufryk.crack.four.one;
 
-import java.util.ArrayList;
 
 class Node {
 	public Integer value;
