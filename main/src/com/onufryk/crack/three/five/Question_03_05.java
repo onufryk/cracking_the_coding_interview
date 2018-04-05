@@ -1,3 +1,6 @@
+/*
+ * Implement a MyQueue class which implements a queue using two stacks.
+ */
 package com.onufryk.crack.three.five;
 
 class Node {

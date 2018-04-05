@@ -1,3 +1,6 @@
+/*
+ * Implement an algorithm to delete a node in the middle of a single linked list, given only access to that node. 
+ */
 package com.onufryk.crack.two;
 
 import com.onufryk.crack.common.IntLinkedList;

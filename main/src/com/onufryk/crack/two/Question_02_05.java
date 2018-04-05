@@ -1,3 +1,6 @@
+/*
+ * Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
+ */
 package com.onufryk.crack.two;
 
 import com.onufryk.crack.common.IntLinkedList;

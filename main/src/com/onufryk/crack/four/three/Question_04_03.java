@@ -1,3 +1,6 @@
+/*
+ * Given a sorted (increasing order) array, write an algorithm to create a binary tree with minimal height.
+ */
 package com.onufryk.crack.four.three;
 
 import java.util.ArrayList;

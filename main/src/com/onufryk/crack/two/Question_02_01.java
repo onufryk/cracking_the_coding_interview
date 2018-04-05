@@ -2,6 +2,9 @@ package com.onufryk.crack.two;
 
 import com.onufryk.crack.common.IntLinkedList;
 
+/**
+ * Write code to remove duplicates from an unsorted linked list. 
+ */
 public class Question_02_01 {
 
 	public static void main(String[] args) {

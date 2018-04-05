@@ -4,7 +4,9 @@ import com.onufryk.crack.common.IntLinkedList;
 import com.onufryk.crack.common.IntNode;
 
 
-
+/*
+ * Implement an algorithm to find the nth to last element of a singly linked list.
+ */
 class NthSearchableList extends IntLinkedList {
   public NthSearchableList() {
     super();
