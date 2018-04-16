@@ -8,8 +8,22 @@
 package com.onufryk.crack.five.seven;
 
 public class Question_05_07 {
+	public static int bit(int a, int j) {
+		return ((a & (1 << j)) > 0) ? 1 : 0;
+	}
 
 	public static void main(String[] args) {
+		int numbers[] = {1, 2, 3, 4, 5, 6, 8, 9,10};
+		
+		int previous = bit(numbers[0], 0);
+		
+		for (int i = 1; i < numbers.length; i++) {
+			if (previous == bit(numbers[i], 0)) {
+				System.out.println(numbers[i] - 1);
+				break;
+			}
+			previous = bit(numbers[i], 0);
+		}
 
 	}
 
